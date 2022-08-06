@@ -16,7 +16,16 @@ This is a a speech-to-text script. It's very simple and doesn't do much.
 ~~~
 $ pip install vosk
 ~~~
- - Download this script
+ - Download [this script](https://raw.githubusercontent.com/dscottboggs/vosk-script/master/vosk-script.py)
+   
+   It can go anywhere, just run it like `python /full/path/to/vosk-script.py`.
+   However, you can also place it in a folder on your `$PATH`, such as
+   `~/.local/bin`, and make it executable, then you will be able to run just
+   `vosk-script.py` from anywhere. Like so:
+~~~
+$ curl https://raw.githubusercontent.com/dscottboggs/vosk-script/master/vosk-script.py > ~/.local/bin/vosk-script.py
+$ chmod 755 ~/.local/bin/vosk-script.py
+~~~
  - Download and unzip a model from
    [this page](https://alphacephei.com/vosk/models). For example:
 ~~~
@@ -24,6 +33,6 @@ $ mkdir ~/.local/share/vosk-models
 $ cd ~/.local/share/vosk-models
 $ wget https://alphacephei.com/vosk/models/vosk-model-en-us-0.22.zip
 $ unzip vosk-model-en-us-0.22.zip
-$ ln -s vosk-model-en-us-0.22.zip english
+$ ln -s vosk-model-en-us-0.22 english
 ~~~
  - Run the script. Run `./vosk-script.py --help` for more information.
